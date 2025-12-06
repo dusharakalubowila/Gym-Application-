@@ -1,0 +1,20 @@
+name: gym-application
+services:
+- name: gym-app
+  github:
+    repo: dusharakalubowila/Gym-Application-
+    branch: main
+  build_command: npm install && npm run build
+  source_dir: dist
+  http_port: 8080
+  envs:
+  - key: NODE_ENV
+    value: production
+static_sites:
+- name: gym-app
+  source_dir: dist
+  github:
+    repo: dusharakalubowila/Gym-Application-
+    branch: main
+  build_command: npm install && npm run build
+  http_port: 8080
